@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+
+<div class="header">
+    <div id="synth"><h1 id="head">Synths</h1></div>
+</div>
+
+<h3 id="title-synth">Synth</h3>
+<label id="type-label" for="synth-type">Sound</label>
+<select onchange="changeSynth()" id="synth-type">
+    <option selected disabled>Choose Sound</option>
+    <option value="mono">Mono</option>
+    <option value="pluck">Pluck</option>
+    <option value="fm">FM</option>
+</select>
+
+<select onchange="changeEffect()" id="effect-type">
+    <option selected disabled value="none">Choose Effect</option>
+    <option value="distortion">Distortion</option>
+    <option value="reverb">Reverb</option>
+    <option value="delay">Delay</option>
+    <option value="none">None</option>
+</select>
+
+<div class="keyboard">
+    <div class="keys">
+        <div class="white-key" id="key" value="C4">A</div>
+        <div class="white-key" id="key" value="D4">S</div>
+        <div class="white-key" id="key" value="E4">D</div>
+        <div class="white-key" id="key" value="F4">F</div>
+        <div class="white-key" id="key" value="G4">G</div>
+        <div class="white-key" id="key" value="A4">H</div>
+        <div class="white-key" id="key" value="B4">J</div>
+
+        <div class="black-key" id="key" value="C#4">W</div>
+        <div class="black-key" id="key" value="D#4">E</div>
+        <div class="black-key" id="key" value="F#4">T</div>
+        <div class="black-key" id="key" value="G#4">Y</div>
+        <div class="black-key" id="key" value="A#4">U</div>
+    </div>
+</div>
+
+<h3 id="title-drums">Drum Pads</h3>
+<label id="kit-label" for="synth-type">Sound</label>
+<select onchange="changeKit()" id="kit-type">
+    <option selected disabled>Choose Kit</option>
+    <option value="kit1">Kit1</option>
+    <option value="kit2">Kit2</option>
+    <option value="kit3">Kit3</option>
+</select>
+
+<div class="drum-pads">
+    <div class="drum-pad" id="d1">7</div>
+    <div class="drum-pad" id="d2">8</div>
+    <div class="drum-pad" id="d3">9</div>
+    <div class="drum-pad" id="d4">4</div>
+    <div class="drum-pad" id="d5">5</div>
+    <div class="drum-pad" id="d6">6</div>
+    <div class="drum-pad" id="d7">1</div>
+    <div class="drum-pad" id="d8">2</div>
+    <div class="drum-pad" id="d9">3</div>
+</div>
+
+
+<script src="static/synths.js"></script>
+
+{% endblock %}

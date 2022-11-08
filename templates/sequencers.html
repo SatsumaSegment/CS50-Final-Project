@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+
+<div class="header">
+    <div id="launchpad">
+        <h1 id="head">Sequencers</h1>
+    </div>
+</div>
+
+<h3 id="drum-title">Drum Sequencer</h3>
+
+<div class="sequencer-content" id="drum-sequencer">
+    <div class="sequencer-player" id="drum-sequencer">
+        <div class="play-bar" id="drum-sequencer"></div>
+    </div>
+
+    <div class="sequencer" id="drum-sequencer"></div>
+
+    <div class="labels" id="drum-sequencer">
+        <div class="sounds">Crash</div>
+        <div class="sounds">Tom</div>
+        <div class="sounds">Hat</div>
+        <div class="sounds">Snare</div>
+        <div class="sounds">Kick</div>
+    </div>
+
+    <div class="sequencer-functions" id="drum-sequencer">
+        <button class="function-button play" id="drum-sequencer" onclick="playSequencer()">Play</button>
+        <button class="function-button stop" id="drum-sequencer" onclick="stop()">Stop</button>
+        <div class="slider" id="drum-sequencer">
+            <label id="tempo-label" for="drum-tempo">Tempo</label>
+            <input type="range" min="1" max="500" value="120" class="tempo-slider" id="drum-tempo" oninput="changeTempo(this)">
+            <label for="drum-tempo" id="drum-tempo-display">0</label>
+        </div>
+    </div>
+</div>
+
+<h3 id="melodic-title">Melodic Sequencer</h3>
+
+<div class="sequencer-content" id="synth-sequencer">
+    <div class="sequencer-player" id="synth-sequencer">
+        <div class="play-bar" id="synth-sequencer"></div>
+    </div>
+
+    <div class="sequencer" id="synth-sequencer"></div>
+
+    <div class="labels" id="synth-sequencer">
+        <div class="synth-sounds">B</div>
+        <div class="synth-sounds">A#</div>
+        <div class="synth-sounds">A</div>
+        <div class="synth-sounds">G#</div>
+        <div class="synth-sounds">G</div>
+        <div class="synth-sounds">F#</div>
+        <div class="synth-sounds">F</div>
+        <div class="synth-sounds">E</div>
+        <div class="synth-sounds">D#</div>
+        <div class="synth-sounds">D</div>
+        <div class="synth-sounds">C#</div>
+        <div class="synth-sounds">C</div>
+    </div>
+
+    <div class="sequencer-functions" id="synth-sequencer">
+        <button class="function-button play" id="synth-sequencer" onclick="playSynthSequencer()">Play</button>
+        <button class="function-button stop" id="synth-sequencer" onclick="stopSynth()">Stop</button>
+        <div class="slider" id="synth-sequencer">
+            <label id="tempo-label" for="synth-tempo">Tempo</label>
+            <input type="range" min="1" max="500" value="120" class="tempo-slider" id="synth-tempo" oninput="changeSynthTempo(this)">
+            <label for="synth-tempo" id="synth-tempo-display">0</label>
+        </div>
+    </div>
+</div>
+
+<h3 id="universal-title">Global Functions</h3>
+<div class="universal-functions" id="sequencers">
+    <button class="function-button play" id="sequencers" onclick="playSequencer(); playSynthSequencer();">Play</button>
+    <button class="function-button stop" id="sequencers" onclick="stopAll()">Stop</button>
+    <div class="slider" id="sequencers">
+        <label id="tempo-label" for="universal-tempo">Tempo</label>
+        <input type="range" min="1" max="500" value="120" class="tempo-slider" id="universal-tempo" oninput="changeTempoAll(this); changeTempo(this); changeSynthTempo(this);">
+        <label for="universal-tempo" id="universal-tempo-display">0</label>
+    </div>
+</div>
+
+<script src="static/drum_sequencer.js"></script>
+<script src="static/synth_sequencer.js"></script>
+<script src="static/sequencer_stopper.js"></script>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+
+<h3 id="visualizer-title">Audio Visualizer</h3>
+
+<p id="visual-pg">Select an audio file from your device and click within the box to begin the visualizer.</p>
+<p id="visual-pg">Use the sliders and check boxes below to manipulate the visualizer's effect.</p>
+
+<div id="container">
+    <canvas id="visual"></canvas>
+</div>
+
+<input type="file" id="upload" accept="audio/*" name="filename" onchange="getFile(this)">
+
+<div class="sliders">
+    <input type="range" min="0" max="255" value="50" class="slider" id="red">
+    <input type="range" min="0" max="255" value="50" class="slider" id="green">
+    <input type="range" min="0" max="255" value="50" class="slider" id="blue">
+    <input type="range" min="0" max="10" value="0" class="slider" id="effect">
+</div>
+
+<div class="check-boxes">
+    <input type="checkbox" class="checkbox" id="red-effect">
+    <label for="red-effect">Red Effect</label>
+    <input type="checkbox" class="checkbox" id="green-effect">
+    <label for="green-effect">Green Effect</label>
+    <input type="checkbox" class="checkbox" id="blue-effect">
+    <label for="blue-effect">Blue Effect</label>
+    <input type="checkbox" class="checkbox" id="rotate">
+    <label for="rotate">360 Visual</label>
+</div>
+
+<script src="static/visualizer.js"></script>
+
+{% endblock %}

@@ -1,0 +1,751 @@
+#parent-navbar {
+    border-bottom: 2px solid orange;
+    border-radius: 0px 0px 15px 15px;
+}
+
+    .navtitle#sound {
+        color: white;
+    }
+
+    .navtitle#xone {
+        color: orange;
+    }
+
+    .nav-link {
+        color: white;
+    }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #252525;
+}
+
+    #content {
+        background-color: #474747;
+        border-left: 2px solid #6B6B6B;
+        border-right: 1px solid #6B6B6B;
+        position: relative;
+        overflow: auto;
+        height: 100vh;
+        width: 70vw;
+        left: 15%;
+    }
+
+.header {
+    height: 40%;
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+}
+
+    #head {
+        position: absolute;
+        text-align: center;
+        margin-top: -15px;
+        padding: 42px;
+        margin-left: auto;
+        margin-right: auto;
+        color: orange;
+        text-shadow: 2px 0 black;
+    }
+
+@media only screen and (max-width: 1000px) {
+    #content {
+        width: 100vw;
+        left: 0;
+    }
+}
+
+/*----------------------------------- Index Content ------------------------------------------*/
+
+.logo {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 50%;
+}
+    #logo1 {
+        color: white;
+        display: inline-block;
+    }
+
+    #logo2 {
+        color: orange;
+        display: inline-block;
+    }
+
+h4 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#signed {
+    margin-top: -0%;
+    text-align: center;
+}
+
+#home-launchpad {
+    background-image: url('launchpad.jpg');
+    height: 30vh;
+    width: 32vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 15px 15px #474747 inset;
+    margin-left: 12%;
+    margin-top: -18%;
+}
+
+#home-synth {
+    background-image: url('synth.jpg');
+    height: 30vh;
+    width: 38vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 15px 15px #474747 inset;
+    margin-left: 34%;
+    margin-top: 1%;
+}
+
+/*-------------------------------- Sequencers Content--------------------------------------------*/
+
+#launchpad {
+    background-image: url('launchpad.jpg');
+    height: 35vh;
+    background-position: 10% 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0 0 15px 15px #474747 inset;
+}
+
+/* ---- Drum Sequencer ----*/
+
+#drum-title {
+    text-align: center;
+}
+
+#drum-sequencer.sequencer-content {
+    position: relative;
+    margin: auto;
+    height: 50%;
+}
+
+    #drum-sequencer.sequencer {
+        margin: 0;
+        border: 4px solid black;
+        position: absolute;
+        left: 10%;
+        height: 50%;
+        width: 80%;
+    }
+
+        .pad {
+            width: 6.25%;
+            height: 20%;
+            outline: 1px solid black;
+            float: left;
+            background-color: white;
+            opacity: 0.1;
+        }
+
+
+            .pad[data-row="0"]:hover {
+                background-color: #E59866;
+                opacity: 0.5;
+            }
+
+            .pad[data-row="1"]:hover {
+                background-color: #C39BD3;
+                opacity: 0.5;
+            }
+
+            .pad[data-row="2"]:hover {
+                background-color: #F7DC6F;
+                opacity: 0.5;
+            }
+
+            .pad[data-row="3"]:hover {
+                background-color: #58D68D;
+                opacity: 0.5;
+            }
+
+            .pad[data-row="4"]:hover {
+                background-color: #A569BD;
+                opacity: 0.5;
+            }
+
+    #drum-sequencer.sequencer-player {
+        margin: 0;
+        border: 4px solid black;
+        position: absolute;
+        left: 10%;
+        height: 50%;
+        width: 80%;
+    }
+
+        #drum-sequencer.play-bar {
+                width: 6.25%;
+                height: 100%;
+                float: left;
+                opacity: 0.4;
+            }
+
+    #drum-sequencer.labels {
+        position: relative;
+        height: 50%;
+        width: 10%;
+    }
+
+        .sounds {
+            height: 20%;
+            padding: 8%;
+            position: relative;
+            text-align: right;
+        }
+
+    #drum-sequencer.sequencer-functions {
+        position: relative;
+        margin-top: 2%;
+        width: 100%;
+    }
+
+        .function-button {
+            border: none;
+            background-color: black;
+            padding: 2% 4%;
+            border-radius: 50px;
+            text-align: center;
+            display: inline-flex;
+            font-size: 100%;
+        }
+
+            #drum-sequencer.stop {
+                color: #D22B2B;
+                border: 4px solid #D22B2B;
+            }
+
+            #drum-sequencer.play {
+                color: #2ECC71;
+                border: 4px solid #2ECC71;
+                margin-left: 39%;
+            }
+
+                #drum-sequencer.stop:hover {
+                    background-color: #121212;
+                }
+
+                #drum-sequencer.play:hover {
+                    background-color: #121212;
+                }
+
+        .tempo-slider {
+            -webkit-appearance: none;
+            margin-left: auto;
+            margin-right:  auto;
+            margin-top: 2%;
+            width: 60%;
+            height: 20%;
+            border-radius: 15px;
+            opacity: 0.6;
+        }
+
+            #tempo-label {
+                margin-left: 18%;
+            }
+
+            @media only screen and (max-width: 420px) {
+                #tempo-label {
+                    margin-left: 0%;
+                }
+            }
+
+            .tempo-slider:hover {
+                opacity: 1;
+            }
+
+            .tempo-slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #04AA6D;
+                cursor: pointer;
+            }
+
+/* ---- Synth Sequencer ----*/
+
+#melodic-title {
+    text-align: center;
+}
+
+#synth-sequencer.sequencer-content {
+    position: relative;
+    margin: auto;
+    height: 60%;
+}
+
+    #synth-sequencer.sequencer {
+        margin: 0;
+        border: 4px solid black;
+        position: absolute;
+        left: 10%;
+        height: 70%;
+        width: 80%;
+    }
+
+        .synth-pad {
+            width: 6.25%;
+            height: 8.3%;
+            outline: 1px solid black;
+            float: left;
+            background-color: white;
+            opacity: 0.1;
+        }
+
+            .synth-pad[data-row="0"]:hover {
+                background-color: #E59866;
+                opacity: 0.5;
+            }
+
+            .synth-pad[data-row="1"]:hover {
+                background-color: #C39BD3;
+                opacity: 0.5;
+            }
+
+            .synth-pad[data-row="2"]:hover {
+                background-color: #F7DC6F;
+                opacity: 0.5;
+            }
+
+            .synth-pad[data-row="3"]:hover {
+                background-color: #58D68D;
+                opacity: 0.5;
+            }
+
+            .synth-pad[data-row="4"]:hover {
+                background-color: #A569BD;
+                opacity: 0.5;
+            }
+
+            .synth-pad[data-row="5"]:hover {
+                background-color: #7DF9FF;
+                opacity: 0.5;
+            }
+
+            .synth-pad[data-row="6"]:hover {
+                background-color: #E59866;
+                opacity: 0.5;
+            }
+
+            .synth-pad[data-row="7"]:hover {
+                background-color: #C39BD3;
+                opacity: 0.5;
+            }
+
+            .synth-pad[data-row="8"]:hover {
+                background-color: #F7DC6F;
+                opacity: 0.5;
+            }
+
+            .synth-pad[data-row="9"]:hover {
+                background-color: #58D68D;
+                opacity: 0.5;
+            }
+
+            .synth-pad[data-row="10"]:hover {
+                background-color: #A569BD;
+                opacity: 0.5;
+            }
+
+            .synth-pad[data-row="11"]:hover {
+                background-color: #7DF9FF;
+                opacity: 0.5;
+            }
+
+    #synth-sequencer.sequencer-player {
+        margin: 0;
+        border: 4px solid black;
+        position: absolute;
+        left: 10%;
+        height: 70%;
+        width: 80%;
+    }
+
+    #synth-sequencer.play-bar {
+            width: 6.25%;
+            height: 100%;
+            float: left;
+            opacity: 0.4;
+        }
+
+    #synth-sequencer.labels {
+        position: relative;
+        height: 70%;
+        width: 10%;
+    }
+
+        .synth-sounds {
+            position: relative;
+            text-align: right;
+            padding: 8%;
+            height: 8.35%;
+        }
+
+    #synth-sequencer.sequencer-functions {
+        position: relative;
+        margin-top: 2%;
+        width: 100%;
+    }
+
+        .function-button {
+            border: none;
+            background-color: black;
+            padding: 2% 4%;
+            border-radius: 50px;
+            text-align: center;
+            display: inline-flex;
+            font-size: 100%;
+        }
+
+            #synth-sequencer.stop {
+                color: #D22B2B;
+                border: 4px solid #D22B2B;
+            }
+
+            #synth-sequencer.play {
+                color: #2ECC71;
+                border: 4px solid #2ECC71;
+                margin-left: 39%;
+            }
+
+            #synth-sequencer.stop:hover {
+                background-color: #121212;
+            }
+
+            #synth-sequencer.play:hover {
+                background-color: #121212;
+            }
+
+        .tempo-slider {
+            -webkit-appearance: none;
+            margin-left: auto;
+            margin-right:  auto;
+            margin-top: 2%;
+            width: 60%;
+            height: 20%;
+            border-radius: 15px;
+            opacity: 0.6;
+        }
+
+        #tempo-label {
+            margin-left: 18%;
+        }
+
+        @media only screen and (max-width: 420px) {
+            #tempo-label {
+                margin-left: 0%;
+            }
+        }
+
+            .tempo-slider:hover {
+                opacity: 1;
+            }
+
+            .tempo-slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #04AA6D;
+                cursor: pointer;
+            }
+
+/*-------- Universal Functions --------*/
+
+#universal-title {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+#sequencers.stop {
+    color: #D22B2B;
+    border: 4px solid #D22B2B;
+}
+
+#sequencers.play {
+    color: #2ECC71;
+    border: 4px solid #2ECC71;
+    margin-left: 39%;
+}
+
+/*--------------------------- Synths Content -----------------------------------------------------*/
+
+#synth {
+    background-image: url('/static/synth.jpg');
+    height: 35vh;
+    background-position: 10% 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0 0 15px 15px #474747 inset;
+}
+
+#title-synth {
+    text-align: center;
+}
+
+#synth-type {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 2%;
+}
+
+    #type-label {
+        margin-left: 30%;
+    }
+
+.keyboard {
+    position: relative;
+    border: 1px solid black;
+    height: 20%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+}
+
+    .keys {
+        position: relative;
+        height: 100%;
+        text-align: center;
+    }
+
+        .white-key {
+            position: relative;
+            display: inline-block;
+            border: 2px solid black;
+            background-color: white;
+            float: left;
+            height: 100%;
+            width: 14.28%;
+            user-select: none;
+        }
+
+            #key[value="C"] {
+
+            }
+            #key[value="D"] {
+
+            }
+            #key[value="E"] {
+
+            }
+            #key[value="F"] {
+
+            }
+            #key[value="G"] {
+
+            }
+            #key[value="A"] {
+
+            }
+            #key[value="B"] {
+
+            }
+
+        .black-key {
+            position: absolute;
+            color: white;
+            float: left;
+            border: 2px solid white;
+            border-top: 2px solid black;
+            background-color: black;
+            height: 90%;
+            width: 10%;
+            user-select: none;
+        }
+
+            #key[value='C#4'] {
+                left: 9.5%;
+            }
+
+            #key[value='D#4'] {
+                left: 24%;
+            }
+
+            #key[value='F#4'] {
+                left: 52%;
+            }
+
+            #key[value='G#4'] {
+                left: 66.5%;
+            }
+
+            #key[value='A#4'] {
+                left: 81%;
+            }
+
+#title-drums {
+    text-align: center;
+}
+
+#kit-type {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 2%;
+}
+
+    #kit-label {
+        margin-left: 40%;
+    }
+
+.drum-pads {
+    position: relative;
+    border: 10px solid black;
+    border-radius: 15px;
+    height: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: #303030;
+    user-select: none;
+}
+
+    .drum-pad {
+        position: relative;
+        border: 4px solid black;
+        border-radius: 8px;
+        margin: 3%;
+        height: 25%;
+        width: 25%;
+        display: inline-block;
+        background-color: #F7DC6F;
+        vertical-align: top;
+        text-align: center;
+    }
+
+/*----------------------------------------- Visualizer Content----------------------------------*/
+#visualizer-title {
+    margin-top: 2%;
+    text-align: center;
+}
+
+#container {
+    margin: auto;
+    margin-top: 2%;
+    height: 50%;
+    width: 70%;
+    background-color: #474747;
+    border: 2px solid black;
+}
+
+#visual {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
+
+#upload {
+    margin-left: 42%;
+    margin-top: 2%;
+}
+
+.sliders {
+    margin: auto;
+    width: 50%;
+}
+
+    .slider {
+        -webkit-appearance: none;
+        display: block;
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 5%;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+        border-radius: 50px;
+    }
+
+        #red:hover {
+            opacity: 1;
+        }
+
+        #red::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: red;
+            cursor: pointer;
+          }
+
+        #green:hover {
+            opacity: 1;
+        }
+
+        #green::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: green;
+            cursor: pointer;
+          }
+
+        #blue:hover {
+            opacity: 1;
+        }
+
+        #blue::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: blue;
+            cursor: pointer;
+          }
+
+        #effect {
+            margin-bottom: 5%;
+        }
+
+.check-boxes {
+    width: 300px;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+    #rotate {
+        margin-left: 31%;
+    }
+
+/*-------------------------------------- About Content -----------------------------------*/
+
+h5 {
+    margin-top: 20%;
+    text-align: center;
+}
